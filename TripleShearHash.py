@@ -6,6 +6,9 @@ def load_image(image_path):
     img = Image.open(image_path)
     return np.array(img)
 
+def hash_function(x, y):
+    return hash((x, y))
+
 def rotate(image, angle)
     # Define theta in degrees
     angle = 30
@@ -29,7 +32,7 @@ def rotate(image, angle)
     result = side @ middle @ side @ pixels.T
 
     # Print the result
-    print(np.round(result.T))
+    print(np.floor(result.T))
 
 image = load_image('')
 
